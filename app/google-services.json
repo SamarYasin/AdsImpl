@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "703077022789",
+    "project_id": "adsimpl-4df88",
+    "storage_bucket": "adsimpl-4df88.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703077022789:android:557b4d5b30205ac937f72c",
+        "android_client_info": {
+          "package_name": "com.example.adsimpl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQg5ThLLow3oKaopZ59ArH-mKIgqw9xNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

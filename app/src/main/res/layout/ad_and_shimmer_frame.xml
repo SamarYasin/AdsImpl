@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_corner_rectangle">
+
+        <include
+            layout="@layout/small_ad_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <include
+        android:id="@+id/nativeAdView"
+        layout="@layout/small_ad"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/rounded_corner_rectangle"
+        android:padding="8dp">
+
+        <include
+            layout="@layout/medium_one_ad_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <include
+        android:id="@+id/nativeAdViewOne"
+        layout="@layout/medium_one_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/rounded_corner_rectangle"
+        android:padding="8dp">
+
+        <include
+            layout="@layout/medium_two_ad_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <include
+        android:id="@+id/nativeAdViewTwo"
+        layout="@layout/medium_two_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</FrameLayout>
