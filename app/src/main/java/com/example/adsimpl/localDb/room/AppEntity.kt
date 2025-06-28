@@ -1,6 +1,7 @@
 package com.example.adsimpl.localDb.room
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "AppEntity")
 data class AppEntity(

@@ -71,8 +71,12 @@ android {
         jvmTarget = "17"
     }
 
-    buildFeatures{
+    buildFeatures {
+        // Enabling View Binding and Data Binding
+        // View Binding to use feature like including layout files without findViewById
+        viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 
 }
@@ -93,26 +97,30 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     // Google Play Services Ads
-    implementation (libs.play.services.ads)
+    implementation(libs.play.services.ads)
     implementation(libs.shimmer)
 
     // Hilt for Dependency Injection
-    implementation( libs.hilt.android)
-    ksp (libs.hilt.compiler)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 
     // Room for Local Database
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
 
     // Remote Config
-    implementation (libs.firebase.config.ktx)
+    implementation(libs.firebase.config.ktx)
 
     // Serialization
-    implementation (libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.serialization.json)
 
     // Firebase, Analytics
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+
+    // User Messaging Platform for Consent Management
+//    Android API level 21 or higher
+    implementation(libs.user.messaging.platform)
 
     // Testing
     testImplementation(libs.junit)
