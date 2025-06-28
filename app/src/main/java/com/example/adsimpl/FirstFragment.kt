@@ -118,7 +118,7 @@ class FirstFragment : Fragment() {
         }
 
         // Pre-fetching Banner Ad
-        bannerViewModel.loadBannerAd(requireActivity(), binding.bannerAdView) {
+        bannerViewModel.loadBannerAd(binding.bannerAdView) {
             Log.d("FirstFragment", "Banner Ad pre-fetched successfully")
             if (bannerAdIsAllowed) {
                 Log.d("FirstFragment", "Banner Ad is allowed to be shown")

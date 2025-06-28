@@ -1,6 +1,5 @@
 package com.example.adsimpl.adManager
 
-import android.app.Activity
 import android.util.Log
 import android.view.View
 import com.google.android.gms.ads.AdRequest
@@ -9,7 +8,7 @@ import javax.inject.Inject
 
 class BannerAdManager @Inject constructor() {
 
-    fun loadBannerAd(activity: Activity, adView: AdView) {
+    fun loadBannerAd(adView: AdView) {
         Log.d("BannerAdManager", "Loading banner ad")
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)

@@ -6,4 +6,5 @@ plugins {
     alias(libs.plugins.ksp) apply true
     alias(libs.plugins.hilt.android) apply false
     alias(libs.plugins.serialization) apply false
+    alias(libs.plugins.room) apply false
 }

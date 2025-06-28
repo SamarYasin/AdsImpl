@@ -1,6 +1,5 @@
 package com.example.adsimpl.viewmodel
 
-import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.adsimpl.adManager.BannerAdManager
@@ -15,11 +14,12 @@ class BannerViewModel @Inject constructor(
     private val bannerAdManager: BannerAdManager
 ) : ViewModel() {
 
-    fun loadBannerAd(activity: Activity, adView: AdView, onAdLoaded: () -> Unit) {
+    fun loadBannerAd(adView: AdView, onAdLoaded: () -> Unit) {
         when (networkHandler.isNetworkAvailable()) {
             true -> {
                 Log.d("BannerViewModel", "Network available, loading banner ad")
-                bannerAdManager.loadBannerAd(activity, adView)
+                bannerAdManager.loadBannerAd(adView)
+                onAdLoaded.invoke()
             }
 
             false -> {

@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.serialization)
+    alias(libs.plugins.room)
 }
 
 android {
@@ -50,10 +51,15 @@ android {
             resValue("string", "banner_ad", "ca-app-pub-3940256099942544/9214589741")
             resValue("string", "rewarded_ad", "ca-app-pub-3940256099942544/5224354917")
             resValue("string", "rewarded_interstitial_ad", "ca-app-pub-3940256099942544/5354046379")
+            resValue("string", "open_app_ad", "ca-app-pub-3940256099942544/9257395921")
 
             resValue("string", "remote_config", "ad_impl_remote_config")
 
         }
+    }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
     }
 
     compileOptions {
@@ -66,8 +72,6 @@ android {
     }
 
     buildFeatures{
-        viewBinding = true
-        //noinspection DataBindingWithoutKapt
         dataBinding = true
     }
 
@@ -75,29 +79,42 @@ android {
 
 dependencies {
 
+    // Kotlin Standard Library
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
 
+    // Material Components
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    // Navigation Components
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    // Google Play Services Ads
     implementation (libs.play.services.ads)
     implementation(libs.shimmer)
 
+    // Hilt for Dependency Injection
     implementation( libs.hilt.android)
     ksp (libs.hilt.compiler)
 
+    // Room for Local Database
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
+    // Remote Config
     implementation (libs.firebase.config.ktx)
 
+    // Serialization
     implementation (libs.kotlinx.serialization.json)
 
+    // Firebase, Analytics
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
 
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
