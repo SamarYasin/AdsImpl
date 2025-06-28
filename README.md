@@ -1,9 +1,10 @@
 This App includes:
-Room
-Shared Pref
-Ads of all types
-Concent Form
-Subscription
+
+Room,
+Shared Pref,
+Ads of all types,
+ConSent Form,
+Subscription,
 Billing
 
-Serves as a templete to add required features  to an app.
+And Serves as a templete to add required features  to an app.
